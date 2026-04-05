@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praveen Dasari - Web Developer Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Scroll Progress Bar -->
+    <div id="scrollProgress"></div>
+
+    <!-- Custom Alert Modal -->
+    <div class="custom-alert-overlay" id="customAlert">
+        <div class="custom-alert-box">
+            <button class="custom-alert-close" onclick="closeCustomAlert()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="custom-alert-icon">
+                <i class="fas fa-tools"></i>
+            </div>
+            <h3 class="custom-alert-title">Website Under Construction</h3>
+            <p class="custom-alert-message">This portfolio website is currently under development. Some features may not be fully functional yet. Thank you for your patience!</p>
+            <button class="custom-alert-button" onclick="closeCustomAlert()">Got It!</button>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <span class="brand-char">PD</span>
+                <span class="brand-name">Praveen</span>
+            </a>
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header/Hero Section -->
+    <header id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-12 hero-text">
+                    <h1 class="animate-slide-in">Hi, I'm <span class="highlight">Praveen Dasari</span></h1>
+                    <h2 class="animate-slide-in-delay"><span class="typing-text" id="typingText"></span></h2>
+                    <p class="animate-fade-in">Crafting beautiful and functional websites with 3 years of experience in HTML, CSS, JavaScript, and Bootstrap.</p>
+                    <div class="hero-buttons animate-fade-in-delay">
+                        <a href="#contact" class="btn btn-primary btn-lg">Hire Me</a>
+                        <a href="#projects" class="btn btn-outline-light btn-lg">View Work</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="developer-illustration">
+                        <div class="dev-bg-circle"></div>
+                        <div class="dev-workspace">
+                            <div class="dev-desk">
+                                <div class="dev-monitor">
+                                    <div class="monitor-screen">
+                                        <div class="code-editor">
+                                            <div class="editor-header">
+                                                <div class="editor-dot dot-red"></div>
+                                                <div class="editor-dot dot-yellow"></div>
+                                                <div class="editor-dot dot-green"></div>
+                                            </div>
+                                            <div class="code-lines">
+                                                <div class="code-line"></div>
+                                                <div class="code-line"></div>
+                                                <div class="code-line"></div>
+                                                <div class="code-line"></div>
+                                                <div class="code-line"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="monitor-stand"></div>
+                                    <div class="monitor-base"></div>
+                                </div>
+                                
+                                <div class="dev-keyboard">
+                                    <div class="keyboard-keys">
+                                        <div class="key"></div>
+                                        <div class="key"></div>
+                                        <div class="key"></div>
+                                        <div class="key"></div>
+                                        <div class="key"></div>
+                                        <div class="key"></div>
+                                        <div class="key"></div>
+                                        <div class="key"></div>
+                                        <div class="key"></div>
+                                        <div class="key"></div>
+                                        <div class="key"></div>
+                                        <div class="key"></div>
+                                        <div class="key"></div>
+                                        <div class="key"></div>
+                                        <div class="key"></div>
+                                        <div class="key"></div>
+                                        <div class="key"></div>
+                                        <div class="key"></div>
+                                        <div class="key"></div>
+                                        <div class="key"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="dev-mouse">
+                                    <div class="mouse-scroll"></div>
+                                </div>
+                                
+                                <div class="dev-coffee">
+                                    <div class="coffee-top"></div>
+                                    <div class="coffee-handle"></div>
+                                    <div class="coffee-steam"></div>
+                                    <div class="coffee-steam"></div>
+                                    <div class="coffee-steam"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="tech-float-icons">
+                            <i class="fab fa-html5 tech-icon tech-icon-1"></i>
+                            <i class="fab fa-css3-alt tech-icon tech-icon-2"></i>
+                            <i class="fab fa-js tech-icon tech-icon-3"></i>
+                            <i class="fab fa-bootstrap tech-icon tech-icon-4"></i>
+                            <div class="code-symbols symbol-1"></div>
+                            <div class="code-symbols symbol-2"></div>
+                            <div class="code-symbols symbol-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-5 col-md-12">
+                    <div class="about-character">
+                        <div class="avatar-circle">
+                            <div class="mini-character">
+                                <div class="mini-head">
+                                    <div class="mini-hair"></div>
+                                    <div class="mini-face">
+                                        <div class="mini-eyes">
+                                            <span class="mini-eye"></span>
+                                            <span class="mini-eye"></span>
+                                        </div>
+                                        <div class="mini-smile"></div>
+                                    </div>
+                                </div>
+                                <div class="mini-body"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-12">
+                    <div class="about-content">
+                        <h3>Web Developer & Debugger</h3>
+                        <p>I'm Praveen Dasari, a passionate web developer with 3 years of hands-on experience in creating responsive, user-friendly websites and web applications. My journey in web development has equipped me with strong skills in front-end technologies.</p>
+                        <p>I specialize in transforming ideas into interactive digital experiences, with a keen eye for detail and a commitment to writing clean, maintainable code. My debugging skills help me solve complex problems efficiently.</p>
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <h4>3+</h4>
+                                <p>Years Experience</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4>50+</h4>
+                                <p>Projects Completed</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4>100%</h4>
+                                <p>Client Satisfaction</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2 class="section-title">My Skills</h2>
+            <p class="section-subtitle">Technologies I work with</p>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <h4>HTML5</h4>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="90"></div>
+                        </div>
+                        <p>3 Years</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fab fa-css3-alt"></i>
+                        </div>
+                        <h4>CSS3</h4>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="85"></div>
+                        </div>
+                        <p>3 Years</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fab fa-js"></i>
+                        </div>
+                        <h4>JavaScript</h4>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="80"></div>
+                        </div>
+                        <p>3 Years</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fab fa-bootstrap"></i>
+                        </div>
+                        <h4>Bootstrap</h4>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="88"></div>
+                        </div>
+                        <p>3 Years</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h4>Web Development</h4>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="87"></div>
+                        </div>
+                        <p>3 Years</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-bug"></i>
+                        </div>
+                        <h4>Debugging</h4>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="85"></div>
+                        </div>
+                        <p>3 Years</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h4>Responsive Design</h4>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="90"></div>
+                        </div>
+                        <p>3 Years</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h4>UI/UX Design</h4>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="75"></div>
+                        </div>
+                        <p>2 Years</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <p class="section-subtitle">Recent work showcase</p>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <div class="project-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <h4>E-Commerce Website</h4>
+                        <p>A fully responsive e-commerce platform with cart functionality and payment integration.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">HTML</span>
+                            <span class="tech-badge">CSS</span>
+                            <span class="tech-badge">JS</span>
+                            <span class="tech-badge">Bootstrap</span>
+                        </div>
+                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <div class="project-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h4>Restaurant Website</h4>
+                        <p>Modern restaurant website with online reservation system and menu display.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">HTML</span>
+                            <span class="tech-badge">CSS</span>
+                            <span class="tech-badge">JavaScript</span>
+                        </div>
+                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <div class="project-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h4>Portfolio Template</h4>
+                        <p>Creative portfolio template for designers and developers with smooth animations.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">HTML</span>
+                            <span class="tech-badge">CSS</span>
+                            <span class="tech-badge">Bootstrap</span>
+                        </div>
+                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <div class="project-icon">
+                            <i class="fas fa-blog"></i>
+                        </div>
+                        <h4>Blog Platform</h4>
+                        <p>Dynamic blog platform with category filtering and search functionality.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">HTML</span>
+                            <span class="tech-badge">CSS</span>
+                            <span class="tech-badge">JavaScript</span>
+                        </div>
+                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <div class="project-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h4>Education Platform</h4>
+                        <p>Online learning platform with course management and student dashboard.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">HTML</span>
+                            <span class="tech-badge">Bootstrap</span>
+                            <span class="tech-badge">JS</span>
+                        </div>
+                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <div class="project-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>Business Dashboard</h4>
+                        <p>Interactive dashboard with data visualization and analytics features.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">HTML</span>
+                            <span class="tech-badge">CSS</span>
+                            <span class="tech-badge">JavaScript</span>
+                        </div>
+                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Let's work together on your next project</p>
+            <div class="row">
+                <div class="col-lg-5 col-md-12">
+                    <div class="contact-info">
+                        <div class="contact-character">
+                            <div class="contact-avatar">
+                                <div class="avatar-icon">
+                                    <i class="fas fa-user-tie"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <h3>Praveen Dasari</h3>
+                        <p class="contact-title">Web Developer</p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h5>Phone</h5>
+                                    <a href="tel:+919325691889">+91 9325691889</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h5>Email</h5>
+                                    <a href="mailto:praveendasari155@gmail.com">praveendasari155@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h5>Location</h5>
+                                    <p>Available for Remote Work</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-12">
+                    <form class="contact-form">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Your Name" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Your Email" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg">Send Message <i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Praveen Dasari. All Rights Reserved.</p>
+                <p>Designed & Developed with <i class="fas fa-heart"></i> by Praveen</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+   <script src="js/main.js"></script>
+</body>
+</html>
